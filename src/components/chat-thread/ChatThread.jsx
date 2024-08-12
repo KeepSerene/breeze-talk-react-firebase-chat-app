@@ -62,7 +62,9 @@ const ChatThread = () => {
         url: URL.createObjectURL(event.target.files[0]),
       });
 
-      toast.warn("NOW SEND ANY MESSAGE OF YOUR CHOICE TO COMPLETE THE UPLOAD!");
+      toast.warn(
+        "NOW SEND ANY MESSAGE OF YOUR CHOICE TO SEND THE PHOTO TO YOUR BREEZIE."
+      );
     }
   };
 
