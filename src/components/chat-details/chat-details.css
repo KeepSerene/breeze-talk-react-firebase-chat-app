@@ -1,0 +1,107 @@
+.chat-details {
+  flex: 1;
+
+  overflow-y: auto;
+
+  .user {
+    text-align: center;
+    border-bottom: 1px solid rgba(221, 221, 221, 0.208);
+    padding: 1.875rem 1.25rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9375rem;
+
+    img {
+      width: 6.25rem;
+      height: 6.25rem;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  .options {
+    padding: 1.25rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5625rem;
+
+    .icon {
+      width: 1.875rem;
+      height: 1.875rem;
+      background-color: rgba(17, 25, 40, 0.3);
+      border-radius: 50%;
+      padding: 0.625rem;
+      cursor: pointer;
+    }
+
+    .option {
+      .header {
+        text-transform: capitalize;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .photos {
+        margin-top: 1.25rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+
+        .photo-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .photo-desc {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+
+            img {
+              width: 2.5rem;
+              height: 2.5rem;
+              border-radius: 0.3125rem;
+              object-fit: cover;
+            }
+
+            span {
+              color: #a5a5a5;
+              font-size: 0.875rem;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
+
+    button {
+      background-color: rgba(230, 74, 105, 0.553);
+      border: none;
+      border-radius: 0.3125rem;
+      padding: 0.9375rem;
+
+      transition: background-color 250ms ease-in-out;
+
+      &:where(:hover, :focus-visible) {
+        background-color: rgba(220, 20, 60, 0.796);
+      }
+
+      &.logout-btn {
+        background-color: #1a73e8;
+        padding: 0.625rem;
+
+        transition: background-color 250ms ease-in-out;
+
+        &:where(:hover, :focus-visible) {
+          background-color: #5183fe;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+.login {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 6.25rem;
+
+  .item {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+
+      input {
+        background-color: rgba(17, 25, 40, 0.6);
+        border: none;
+        border-radius: 0.3125rem;
+        outline: none;
+        padding: 1.25rem;
+
+        &:focus-within {
+          border: 1px solid #1f8ef1;
+        }
+      }
+
+      .label {
+        width: 100%;
+        text-decoration: underline;
+        cursor: pointer;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+          width: 3.125rem;
+          height: 3.125rem;
+          border-radius: 0.625rem;
+          object-fit: cover;
+
+          opacity: 0.6;
+        }
+      }
+
+      button {
+        width: 100%;
+        background-color: #1f8ef1;
+        font-weight: 500;
+        border: none;
+        border-radius: 0.3125rem;
+        padding: 1.25rem;
+
+        transition: background-color 250ms ease-in-out;
+
+        &:where(:hover, :focus-visible) {
+          background-color: #5183fe;
+        }
+
+        &:disabled {
+          background-color: rgba(31, 143, 241, 0.612);
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  .separator-line {
+    width: 2px;
+    height: 80%;
+    background-color: rgba(221, 221, 221, 0.208);
+  }
+}

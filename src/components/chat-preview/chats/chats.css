@@ -1,0 +1,87 @@
+/* CSS nesting is used */
+
+.chats {
+  flex: 1;
+
+  overflow-y: auto;
+
+  .search-field {
+    padding: 1.25rem;
+
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+
+    .search-bar {
+      flex: 1;
+
+      background-color: rgba(17, 25, 40, 0.5);
+      border-radius: 0.625rem;
+      padding: 0.625rem;
+
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+
+      img {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+
+      input {
+        flex: 1;
+
+        background-color: transparent;
+        border: none;
+        outline: none;
+      }
+    }
+
+    .add-user-icon {
+      width: 2.25rem;
+      height: 2.25rem;
+      background-color: rgba(17, 25, 40, 0.5);
+      border-radius: 0.625rem;
+      padding: 0.625rem;
+      cursor: pointer;
+    }
+  }
+
+  .chat-item {
+    border-bottom: 1px solid rgba(221, 221, 221, 0.208);
+    padding: 1.25rem;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+
+    transition: background-color 250ms ease-in-out;
+
+    &:where(:hover, :focus-within) {
+      background-color: rgba(221, 221, 221, 0.109);
+    }
+
+    img {
+      width: 3.125rem;
+      height: 3.125rem;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .contents {
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+
+      span {
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 0.875rem;
+        font-weight: 300;
+      }
+    }
+  }
+}
