@@ -55,12 +55,14 @@ const ChatThread = () => {
     setShouldOpen(false);
   };
 
-  const sharePhoto = (event) => {
+  const handlePhotoSelection = (event) => {
     if (event.target.files[0]) {
       setPhoto({
         file: event.target.files[0],
         url: URL.createObjectURL(event.target.files[0]),
       });
+
+      toast.warn("NOW SEND ANY MESSAGE OF YOUR CHOICE TO COMPLETE THE UPLOAD!");
     }
   };
 
@@ -108,11 +110,12 @@ const ChatThread = () => {
       toast.error(err.message);
     }
 
-    setInputStr("");
     setPhoto({
       file: null,
       url: "",
     });
+
+    setInputStr("");
   };
 
   return (
@@ -209,7 +212,7 @@ const ChatThread = () => {
           <input
             type="file"
             id="share-photo"
-            onChange={sharePhoto}
+            onChange={handlePhotoSelection}
             style={{ display: "none" }}
           />
 

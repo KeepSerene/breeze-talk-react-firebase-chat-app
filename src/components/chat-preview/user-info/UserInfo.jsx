@@ -10,7 +10,11 @@ const UserInfo = () => {
       <section className="user">
         <img src={currentUserInfo.avatar || "/avatar.png"} alt="User avatar" />
 
-        <h2>{currentUserInfo.username}</h2>
+        <h2 title={currentUserInfo.username}>
+          {currentUserInfo.username.length > 8
+            ? `${currentUserInfo.username.slice(0, 7)}...`
+            : currentUserInfo.username}
+        </h2>
       </section>
 
       <div className="icons">

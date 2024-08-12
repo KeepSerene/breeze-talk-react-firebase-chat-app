@@ -59,6 +59,8 @@ const Login = () => {
 
     const { username, email, password } = Object.fromEntries(formData);
 
+    if (username.trim() === "") return;
+
     try {
       const response = await createUserWithEmailAndPassword(
         auth,
@@ -71,7 +73,7 @@ const Login = () => {
       // Add a new user to the firestore database
       await setDoc(doc(firestoreDB, "users", response.user.uid), {
         id: response.user.uid,
-        username,
+        username: username.trim(),
         email,
         avatar: imgURL,
         blockedUsers: [],
@@ -164,6 +166,7 @@ const Login = () => {
             name="username"
             id="username"
             placeholder="Enter your username"
+            required
           />
 
           <label htmlFor="email" className="sr-only">
@@ -175,6 +178,7 @@ const Login = () => {
             name="email"
             id="email"
             placeholder="Enter your email"
+            required
           />
 
           <label htmlFor="password" className="sr-only">
@@ -186,6 +190,7 @@ const Login = () => {
             name="password"
             id="password"
             placeholder="Enter your password"
+            required
           />
 
           <button type="submit" disabled={isLoading}>
