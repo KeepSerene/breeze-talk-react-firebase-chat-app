@@ -109,6 +109,7 @@ const Login = () => {
             name="registeredEmail"
             id="registered-email"
             placeholder="Enter your email"
+            required
           />
 
           <label htmlFor="registered-password" className="sr-only">
@@ -120,6 +121,7 @@ const Login = () => {
             name="registeredPassword"
             id="registered-password"
             placeholder="Enter your password"
+            required
           />
 
           <button type="submit" disabled={isLoading}>

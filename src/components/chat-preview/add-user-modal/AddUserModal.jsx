@@ -118,6 +118,7 @@ const AddUserModal = ({ chatPreviews }) => {
           name="username"
           placeholder="Search by username"
           ref={searchInputElemRef}
+          required
         />
 
         <button type="submit">Search</button>
