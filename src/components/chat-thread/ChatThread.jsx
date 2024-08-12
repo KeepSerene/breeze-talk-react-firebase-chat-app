@@ -204,7 +204,7 @@ const ChatThread = () => {
             <img
               src="/img.png"
               alt="Gallery icon"
-              title="Open gallery"
+              title="Share photo"
               role="button"
               aria-label="Click to choose a picture from your device's internal storage"
               tabIndex={0}
