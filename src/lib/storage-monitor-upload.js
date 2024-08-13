@@ -2,6 +2,9 @@ import { storage } from "./firebase-config";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 
 const getImageURL = async (file) => {
+  // If the current user doesn't upload an avatar:
+  if (!file) return new Promise((resolve) => resolve(null));
+
   const storageRef = ref(storage, `images/${new Date() + file.name}`);
 
   const uploadTask = uploadBytesResumable(storageRef, file);

@@ -14,7 +14,6 @@ const Login = () => {
     file: null,
     url: "",
   });
-
   const [isLoading, setIsLoading] = useState(false);
 
   const handleAvatarSelection = (event) => {
@@ -75,7 +74,7 @@ const Login = () => {
         id: response.user.uid,
         username: username.trim(),
         email,
-        avatar: imgURL,
+        avatar: imgURL || "/avatar.png",
         blockedUsers: [],
       });
 

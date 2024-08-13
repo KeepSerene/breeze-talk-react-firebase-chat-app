@@ -58,6 +58,12 @@
         border-radius: 50%;
         object-fit: cover;
       }
+
+      span {
+        max-width: 11ch;
+        text-wrap: wrap;
+        word-break: break-all;
+      }
     }
 
     button {
