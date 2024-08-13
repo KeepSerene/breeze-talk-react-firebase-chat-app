@@ -74,7 +74,7 @@ const Login = () => {
         id: response.user.uid,
         username: username.trim(),
         email,
-        avatar: imgURL || "/avatar.png",
+        avatar: imgURL || "",
         blockedUsers: [],
       });
 
