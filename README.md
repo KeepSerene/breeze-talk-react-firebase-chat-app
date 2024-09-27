@@ -1,8 +1,10 @@
-# React + Vite
+# BreezeTalk - A real-time React.js & Firebase based chat app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Author
 
-Currently, two official plugins are available:
+- Dhrubajyoti Bhattacharjee
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Note
+
+- One can find the live site [here](https://breeze-talk-chat-react.web.app/).
+- There are multiple issues to fix still. It's a work in progress.
